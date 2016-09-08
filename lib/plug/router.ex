@@ -174,7 +174,7 @@ defmodule Plug.Router do
       end
 
       @doc false
-      def dispatch(%Plug.Conn{assigns: assigns} = conn, _opts) do
+      def dispatch(conn, _opts) do
         Map.get(conn.private, :plug_route).(conn)
       end
 
